@@ -41,7 +41,7 @@ def run(context):
         x = numpy.linspace(0, LENGTH, Numpnts)
         if NoseConeType == "Haack":
             theta = numpy.arccos(1-2*x/LENGTH)
-            y = 2 * (r/numpy.sqrt(numpy.pi)) * numpy.sqrt(theta - numpy.sin(2*theta)/2 + C * numpy.power(numpy.sin(theta),3))
+            y = (r/numpy.sqrt(numpy.pi)) * numpy.sqrt(theta - numpy.sin(2*theta)/2 + C * numpy.power(numpy.sin(theta),3))
             for i in range(Numpnts):           
                 pnts.add(adsk.core.Point3D.create(x[i],y[i],0))
                 
